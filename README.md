@@ -1,5 +1,8 @@
 # newspk
+## Description
+A basic nodejs based news website (dawn) scraper. You can use this API to fetch latest news in English or Urdu language. It uses node-fetch and jsdom dependencies and hence is a very light-weighted package.
 
+## INSTALLATION
 You need to install node nodejs and npm package on your machine before using this package.
 
 After installing nodejs and npm, install this package using the command:
