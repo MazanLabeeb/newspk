@@ -1,6 +1,6 @@
 {
   "name": "newspk",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "This simple nodejs library fetches news for you.",
   "main": "src/index.js",
   "scripts": {
@@ -23,5 +23,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/MazanLabeeb/newspk.git"
-}
+  }
 }
