@@ -1,0 +1,23 @@
+{
+  "name": "newspk",
+  "version": "1.0.7",
+  "description": "This simple nodejs library fetches news for you.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "commonjs",
+  "keywords": [
+    "newspk",
+    "pakistan",
+    "news",
+    "paknewsapi"
+  ],
+  "author": "mazan labeeb",
+  "license": "ISC",
+  "dependencies": {
+    "jsdom": "^20.0.0",
+    "node-fetch": "^2.6.7",
+    "striptags": "^3.2.0"
+  }
+}
