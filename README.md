@@ -19,7 +19,7 @@ const newspk = require("newspk");
 
 ```
 (async () => {
-    let limit = 5;              // will fetch 5 most recent news
+    let limit = 5;              // will fetch 5 most recent news, dont use limit beyond 15
     let lang = "english";       // for english
     // let lang = "urdu";       // for urdu
 
