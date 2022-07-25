@@ -35,4 +35,3 @@ const newspk = require("newspk");
 ### ALTERNATIVELY, you can run example.js file.
 
 ### Feel free to contribute to the repository.
-
