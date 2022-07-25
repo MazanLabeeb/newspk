@@ -50,7 +50,6 @@ let exe = async function (no = 5,lang = "urdu") {
   
             return content;
 
-
 };
 
 module.exports.news = function(no, lang){
