@@ -3,7 +3,7 @@
 // USE FOR EDUCATIONAL PRUPOSES ONLY 
 
 
-const fetch = require('node-fetch'); 
+const fetch = require('node-fetch');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 var striptags = require('striptags');
@@ -23,12 +23,12 @@ let getnews = async function (url) {
 };
 
 
-let exe = async function (no = 5,lang = "urdu") {
-    if(lang.toLowerCase() == "urdu"){
+let exe = async function (no = 5, lang = "urdu") {
+    if (lang.toLowerCase() == "urdu") {
         var response = await fetch('https://www.dawnnews.tv/latest-news');
-    }else{
-    var response = await fetch('https://www.dawn.com/latest-news');
-        
+    } else {
+        var response = await fetch('https://www.dawn.com/latest-news');
+
     }
     const body = await response.text();
     const dom = new JSDOM(body);
@@ -37,23 +37,25 @@ let exe = async function (no = 5,lang = "urdu") {
     let created_at = dom.window.document.getElementsByClassName('timeago');
     var content = [];
     for (let i = 0; i < no; i++) {
-       await getnews(b[i].firstChild.href).then((data) => {
-        content.push({
+        let unique_id = b[i].firstChild.href.slice(29).replace('/', '').trim();
+        await getnews(b[i].firstChild.href).then((data) => {
+            content.push({
                 "title": a[i].innerHTML,
                 "thumbnail": b[i].firstChild.firstChild.firstChild.src,
                 "body": data,
+                "unique_id": unique_id,
                 "created_at": created_at[i].title
             });
         })
-        
+
     }
-  
-            return content;
+
+    return content;
 
 };
 
-module.exports.news = function(no, lang){
-    return new Promise((resolve, reject)=>{
+module.exports.news = function (no, lang) {
+    return new Promise((resolve, reject) => {
         let a = exe(no, lang);
         resolve(a);
     })
