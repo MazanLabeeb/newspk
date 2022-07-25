@@ -1,6 +1,8 @@
 //    THIS NEWS SCRAPER HAS BEEN MADE BY MAZAN LABEEB
 // DON'T FORGET TO GIVE CREDITS
-// USE FOR EDUCATIONAL PRUPOSES ONLY NOT FOR PRODUCTION LEVEL
+// USE FOR EDUCATIONAL PRUPOSES ONLY 
+
+
 const fetch = require('node-fetch'); 
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
@@ -19,7 +21,6 @@ let getnews = async function (url) {
     }
     return db;
 };
-
 
 
 let exe = async function (no = 5,lang = "urdu") {
