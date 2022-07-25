@@ -18,15 +18,18 @@ const newspk = require("newspk");
 ### Basic Usage:
 
 ```
+const newspk = require("newspk");
+
 (async () => {
-    let limit = 5;              // will fetch 5 most recent news, dont use limit beyond 15
+    let limit = 5;              // max-allowed: 15
     let lang = "english";       // for english
     // let lang = "urdu";       // for urdu
 
     let news = await newspk.news(limit, lang);
-    console.log(news)           // An array of object with properties "title", "thumbnail", "body"
+    console.log(news)           // An array of object with properties "title", "thumbnail", "body", "created_at"
 
 })();
+
 ```
 
 ### ALTERNATIVELY, you can run example.js file.
