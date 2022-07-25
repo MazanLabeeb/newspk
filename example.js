@@ -6,6 +6,6 @@ const newspk = require("newspk");
     // let lang = "urdu";       // for urdu
 
     let news = await newspk.news(limit, lang);
-    console.log(news)           // An array of object with properties "title", "thumbnail", "body", "created_at"
+    console.log(news)           // An array of object with properties "title", "thumbnail", "body", "created_at", "unique id"
 
 })();
