@@ -37,7 +37,7 @@ let exe = async function (no = 5, lang = "urdu") {
     let created_at = dom.window.document.getElementsByClassName('timeago');
     var content = [];
     for (let i = 0; i < no; i++) {
-        let unique_id = b[i].firstChild.href.slice(29).replace('/', '').trim();
+        let unique_id = b[i].firstChild.href.split('/')[4];
         await getnews(b[i].firstChild.href).then((data) => {
             content.push({
                 "title": a[i].innerHTML,
