@@ -21,8 +21,8 @@ let getnews = async function (url) {
 };
 
 
-let exe = async function (no,lang) {
-    if(lang == "urdu"){
+let exe = async function (no = 5,lang = "urdu") {
+    if(lang.toLowerCase() == "urdu"){
         var response = await fetch('https://www.dawnnews.tv/latest-news');
     }else{
     var response = await fetch('https://www.dawn.com/latest-news');
@@ -32,13 +32,15 @@ let exe = async function (no,lang) {
     const dom = new JSDOM(body);
     let a = dom.window.document.getElementsByClassName('story__link');
     let b = dom.window.document.getElementsByClassName('media__item');
+    let created_at = dom.window.document.getElementsByClassName('timeago');
     var content = [];
     for (let i = 0; i < no; i++) {
        await getnews(b[i].firstChild.href).then((data) => {
         content.push({
                 "title": a[i].innerHTML,
                 "thumbnail": b[i].firstChild.firstChild.firstChild.src,
-                "body": data
+                "body": data,
+                "created_at": created_at[i].title
             });
         })
         
