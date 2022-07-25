@@ -21,6 +21,7 @@ let getnews = async function (url) {
 };
 
 
+
 let exe = async function (no = 5,lang = "urdu") {
     if(lang.toLowerCase() == "urdu"){
         var response = await fetch('https://www.dawnnews.tv/latest-news');
