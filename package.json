@@ -1,6 +1,6 @@
 {
   "name": "newspk",
-  "version": "1.0.17",
+  "version": "1.1.0",
   "description": "This simple nodejs library fetches news for you.",
   "main": "src/index.js",
   "scripts": {
