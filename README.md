@@ -21,7 +21,7 @@ const newspk = require("newspk");
 const newspk = require("newspk");
 
 (async () => {
-    let limit = 5;              // max-allowed: 15
+    let limit = 5;              // max-allowed: 15, may return error on limit violation
     let lang = "english";       // for english
     // let lang = "urdu";       // for urdu
 
