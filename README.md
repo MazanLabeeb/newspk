@@ -27,6 +27,8 @@ const newspk = require("newspk");
     let limit = 5;              // max-allowed: 15, may return unexpected errors on limit violation
     let lang = "english";       // for english
     // let lang = "urdu";       // for urdu
+    // let lang = "dutch";       // for dutch
+
 
     let news = await newspk.news(limit, lang);
     console.log(news)           // An array of object with properties "title", "thumbnail", "body", "created_at", "unique id"
