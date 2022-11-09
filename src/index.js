@@ -54,6 +54,38 @@ let exe = async function (no = 5, lang = "urdu") {
 
 };
 
+let exe = async function (no = 5, lang = "dutch") {
+    if (lang.toLowerCase() == "dutch") {
+        var response = await fetch('https://www.hln.be/net-binnen');
+    } else {
+        var response = await fetch('https://www.dawn.com/latest-news');
+
+    }
+    const body = await response.text();
+    const dom = new JSDOM(body);
+    let a = dom.window.document.getElementsByClassName('story__link');
+    let b = dom.window.document.getElementsByClassName('media__item');
+    let created_at = dom.window.document.getElementsByClassName('timeago');
+    var content = [];
+    for (let i = 0; i < no; i++) {
+        let unique_id = b[i].firstChild.href.split('/')[4];
+        await getnews(b[i].firstChild.href).then((data) => {
+            content.push({
+                "title": a[i].innerHTML,
+                "thumbnail": b[i].firstChild.firstChild.firstChild.src,
+                "body": data,
+                "unique_id": unique_id,
+                "created_at": created_at[i].title
+            });
+        })
+
+    }
+
+    return content;
+
+};
+
+
 module.exports.news = function (no, lang) {
     return new Promise((resolve, reject) => {
         let a = exe(no, lang);
