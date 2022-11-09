@@ -1,6 +1,6 @@
 # newspk
 ## Description
-A basic nodejs based news website (dawn) scraper. You can use this API to fetch latest news in English or Urdu language. It uses node-fetch and jsdom dependencies and hence is a very light-weighted package.
+A basic nodejs based news website (dawn) scraper. You can use this API to fetch latest news in English, Dutch or Urdu language. It uses node-fetch and jsdom dependencies and hence is a very light-weighted package.
 
 ## REST API
 <a href="https://newspk.herokuapp.com">API</a>
