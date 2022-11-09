@@ -23,11 +23,11 @@ let getnews = async function (url) {
 };
 
 
-let exe = async function (no = 5, lang = "urdu") {
-    if (lang.toLowerCase() == "urdu") {
-        var response = await fetch('https://www.dawnnews.tv/latest-news');
+let exe = async function (no = 5, lang = "nl") {
+    if (lang.toLowerCase() == "nl") {
+        var response = await fetch('https://www.hln.be/net-binnen');
     } else {
-        var response = await fetch('https://www.dawn.com/latest-news');
+        var response = await fetch('https://www.hln.be/net-binnen');
 
     }
     const body = await response.text();
