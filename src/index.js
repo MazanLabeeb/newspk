@@ -56,7 +56,7 @@ let exe = async function (no = 5, lang = "urdu") {
 
 let exe = async function (no = 5, lang = "dutch") {
     if (lang.toLowerCase() == "dutch") {
-        var response = await fetch('https://www.hln.be/net-binnen');
+        var response = await fetch('https://www.nu.nl/net-binnen');
     } else {
         var response = await fetch('https://www.dawn.com/latest-news');
 
