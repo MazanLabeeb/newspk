@@ -1,8 +1,3 @@
-//    THIS NEWS SCRAPER HAS BEEN MADE BY MAZAN LABEEB
-// DON'T FORGET TO GIVE CREDITS
-// USE FOR EDUCATIONAL PRUPOSES ONLY 
-
-
 const fetch = require('node-fetch');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
