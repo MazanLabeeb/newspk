@@ -1,25 +1,43 @@
 {
   "name": "newspk",
-  "version": "1.1.0",
-  "description": "This simple nodejs library fetches news for you.",
-  "main": "src/index.js",
+  "version": "2.0.0",
+  "description": "A TypeScript-based Node.js library for fetching latest news from Pakistani news sources (Dawn News) in English and Urdu.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "example": "npx ts-node example.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
   },
   "type": "commonjs",
   "keywords": [
     "newspk",
     "pakistan",
     "news",
-    "paknewsapi"
+    "paknewsapi",
+    "typescript",
+    "scraper",
+    "dawn-news"
   ],
   "author": "mazan labeeb",
   "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
     "jsdom": "^20.0.0",
-    "newspk": "^1.0.14",
     "node-fetch": "^2.6.7",
     "striptags": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.0",
+    "@types/node": "^20.0.0",
+    "@types/node-fetch": "^2.6.13",
+    "@types/striptags": "^3.0.0",
+    "typescript": "^5.0.0"
   },
   "repository": {
     "type": "git",
