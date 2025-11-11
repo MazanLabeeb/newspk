@@ -5,7 +5,6 @@
 ### Added
 - Complete TypeScript migration with strict mode
 - Type definitions exported for library users
-- Express API server with TypeScript
 - Build system (npm run build, dev, clean)
 - JSDoc documentation on public APIs
 
